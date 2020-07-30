@@ -30,7 +30,7 @@ class _MenuLiderPdvState extends State<MenuLiderPdv> {
           )),
           Card(
               child: ListTile(
-            title: Text('Restaurante 3'),
+            title: Text('Restaurante'),
             subtitle: Text('Lançamento de mesas computador/smartphone'),
             leading: CircleAvatar(
               backgroundImage: AssetImage('assets/restaurante.png'),
