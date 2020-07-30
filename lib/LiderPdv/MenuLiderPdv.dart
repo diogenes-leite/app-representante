@@ -1,58 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:lider_app_teste/LiderPdv/liderPdv.dart';
 
 class MenuLiderPdv extends StatefulWidget {
   @override
-  _MenuLiderPdvState createState() => _MenuLiderPdvState();
+  _LiderPdvState createState() => _LiderPdvState();
 }
 
-class _MenuLiderPdvState extends State<MenuLiderPdv> {
+class _LiderPdvState extends State<MenuLiderPdv> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Opções do LiderPdv'),
-       backgroundColor: Colors.green,
-      ),
-      body: ListView(
-        children: <Widget>[
-          Card(
-              child: ListTile(
-            title: Text('Pedido'),
-            subtitle: Text('Pedidos convertidos em venda'),
-            leading: CircleAvatar(
-              backgroundImage: AssetImage('assets/pedido.png'),
-            ),
-            onTap: (){
-              Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LiderPdv()));
-            },
-          )),
-          Card(
-              child: ListTile(
-            title: Text('Restaurante'),
-            subtitle: Text('Lançamento de mesas computador/smartphone'),
-            leading: CircleAvatar(
-              backgroundImage: AssetImage('assets/restaurante.png'),
-            ),
-            onTap: (){
-              Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LiderPdv()));
-            },
-          )),
-          Card(
-              child: ListTile(
-            title: Text('Delivery'),
-            subtitle: Text('Controle por status por etapa e controle de entregas'),
-            leading: CircleAvatar(
-              backgroundImage: AssetImage('assets/restaurante.png')),
-              onTap: (){
-              Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LiderPdv()));
-            },
-          )
-          )
-        ],
+    
+
+    final _abaPagdados = <Tab>[
+      Tab(icon: Icon(Icons.), text: 'Pedido'),
+      Tab(icon: Icon(Icons.restaurant), text: 'Restaurante'),
+      Tab(icon: Icon(Icons.dialer_sip ), text: 'Delivery'),
+    ];
+
+    return DefaultTabController(
+      length: _abaPagdados.length,
+      child: Scaffold(
+        appBar: AppBar(
+        
+          title: Text('LiderPdv'),
+          bottom: TabBar(
+            tabs: _abaPagdados,
+          ),
+        ),
+        body: Container(
+          
+        ),
       ),
     );
   }
