@@ -9,9 +9,7 @@ class MenuWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final avatar = homeWeb.imagePath == null || homeWeb.imagePath.isNotEmpty
-    ? CircleAvatar(child: Icon(Icons.person))
-    : CircleAvatar(backgroundImage: AssetImage(homeWeb.imagePath));
+    final avatar =  CircleAvatar(backgroundImage: AssetImage(homeWeb.imagePath));
     return ListTile(
       leading: avatar,
     );
