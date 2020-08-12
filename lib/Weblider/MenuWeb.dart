@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lider_app_teste/Weblider/Dummy_lista.dart';
+import 'package:lider_app_teste/Weblider/UserItile.dart';
 
 class MenuWeb extends StatelessWidget {
   final lista = DUMMY_LISTA;
@@ -10,12 +11,10 @@ class MenuWeb extends StatelessWidget {
           title: Text('Sistemas Web Lider'),
         ),
         body: ListView.builder(
-            itemCount: lista.length,
-            itemBuilder: (context, index) {
-              return ListTile();
-            }
+          itemCount: lista.length,
+          itemBuilder: (ctx, i) => Usertile(lista.values.elementAt(i)),
 
-            //Text(lista.values.elementAt(i).title)),
-            ));
+          //Text(lista.values.elementAt(i).title)),
+        ));
   }
 }

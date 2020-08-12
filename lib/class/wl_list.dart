@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class HomeWeb {
+class User {
   final String id;
   final String title;
+  final String subtitle;
   final String imagePath;
 
-  const HomeWeb({
+  const User({
     this.id,
     @required this.title,
+    @required this.subtitle,
     @required this.imagePath,
   });
 }
