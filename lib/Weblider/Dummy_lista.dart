@@ -16,4 +16,19 @@ const DUMMY_LISTA = {
     subtitle: 'Emissão de NFSE municipal',
     imagePath: 'assets/Image_nfse.png',
   ),
+  '4': const User(
+    title: 'Cte',
+    subtitle: 'Emissão de NFSE municipal',
+    imagePath: 'assets/Image_nfse.png',
+  ),
+  '5': const User(
+    title: 'Mdfe',
+    subtitle: 'Emissão de NFSE municipal',
+    imagePath: 'assets/Image_nfse.png',
+  ),
+  '6': const User(
+    title: 'Cte-os',
+    subtitle: 'Emissão de NFSE municipal',
+    imagePath: 'assets/Image_nfse.png',
+  ),
 };
