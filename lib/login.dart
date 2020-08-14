@@ -69,13 +69,6 @@ class _LoginState extends State<Login> {
                               builder: (context) => PagInicial()));
                     } else {}
 
-                    //if (DM_login.containsValue(user) && DM_login.containsValue(password))   {
-
-                    // return PagInicial();
-                    // } else {
-
-                    //}
-
                     //Navigator.push(context,
                     // MaterialPageRoute(builder: (context) => PagInicial()));
                   },
