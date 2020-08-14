@@ -9,7 +9,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  
   final TextEditingController _controladorUser = TextEditingController();
   final TextEditingController _controladorPassword = TextEditingController();
 
@@ -63,12 +62,19 @@ class _LoginState extends State<Login> {
                         ClassLoginDados(user: user, password: password);
                     print(verifica);
 
-                    if (DM_login.containsValue(user) && DM_login.containsValue(password))   {
-                                          
-                      return PagInicial();
-                    } else {
-                      
-                    }
+                    if (user == 'diogenes' && password == '2525') {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PagInicial()));
+                    } else {}
+
+                    //if (DM_login.containsValue(user) && DM_login.containsValue(password))   {
+
+                    // return PagInicial();
+                    // } else {
+
+                    //}
 
                     //Navigator.push(context,
                     // MaterialPageRoute(builder: (context) => PagInicial()));
