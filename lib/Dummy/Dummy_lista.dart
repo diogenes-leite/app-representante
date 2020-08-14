@@ -1,4 +1,5 @@
-import 'package:lider_app_teste/class/wl_list.dart';
+import 'package:lider_app_teste/class/class_list_weblider.dart';
+
 
 const DUMMY_LISTA = {
   '1': const User(

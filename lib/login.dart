@@ -1,7 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:lider_app_teste/PagInicial.dart';
+import 'package:lider_app_teste/class/class_login.dart';
+import 'package:lider_app_teste/Dummy/DM_login.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -9,7 +9,9 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  var user, password;
+  
+  final TextEditingController _controladorUser = TextEditingController();
+  final TextEditingController _controladorPassword = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,22 +37,41 @@ class _LoginState extends State<Login> {
                     labelStyle: TextStyle(color: Colors.green)),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.green, fontSize: 25.0),
-                controller: user,
+                controller: _controladorUser,
               ),
+
+              // definindo o campo de senha
               TextField(
-                keyboardType: TextInputType.text,
+                obscureText: true,
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                     labelText: 'Senha',
                     labelStyle: TextStyle(color: Colors.green)),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.green, fontSize: 25.0),
-                controller: password,
+                controller: _controladorPassword,
               ),
+              //definindo botão de entrar no sistema
+              Divider(),
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => PagInicial()));
+                    final String user = _controladorUser.text;
+                    final String password = _controladorPassword.text;
+
+                    final ClassLoginDados verifica =
+                        ClassLoginDados(user: user, password: password);
+                    print(verifica);
+
+                    if (DM_login.containsValue(user) && DM_login.containsValue(password))   {
+                                          
+                      return PagInicial();
+                    } else {
+                      
+                    }
+
+                    //Navigator.push(context,
+                    // MaterialPageRoute(builder: (context) => PagInicial()));
                   },
                   child: Text(
                     'Entrar',

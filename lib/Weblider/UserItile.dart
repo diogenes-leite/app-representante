@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lider_app_teste/class/wl_list.dart';
+import 'package:lider_app_teste/class/class_list_weblider.dart';
+
 
 class Usertile extends StatelessWidget {
   final User user;

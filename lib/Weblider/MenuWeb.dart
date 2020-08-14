@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lider_app_teste/Weblider/Dummy_lista.dart';
+import 'package:lider_app_teste/Dummy/Dummy_lista.dart';
+
 import 'package:lider_app_teste/Weblider/UserItile.dart';
 
 class MenuWeb extends StatelessWidget {
