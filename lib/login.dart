@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:lider_app_teste/PagInicial.dart';
 import 'package:lider_app_teste/class/class_login.dart';
-import 'package:lider_app_teste/Dummy/DM_login.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -67,7 +67,10 @@ class _LoginState extends State<Login> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => PagInicial()));
-                    } else {}
+                    } else { 
+                      SnackBar(content: Text('usuário e senha incoretos'));
+
+                    }
 
                     //Navigator.push(context,
                     // MaterialPageRoute(builder: (context) => PagInicial()));
