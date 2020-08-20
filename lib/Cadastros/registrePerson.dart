@@ -3,15 +3,15 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 class RegisterPerson extends StatefulWidget {
-
   @override
   _RegisterPersonState createState() => _RegisterPersonState();
 }
 
 class _RegisterPersonState extends State<RegisterPerson> {
   final TextEditingController _controladorName = TextEditingController();
-  final TextEditingController _controladorUser = TextEditingController();
-
+  final TextEditingController _controladorFone = TextEditingController();
+  final TextEditingController _controladorAdress = TextEditingController();
+  final TextEditingController _controladorEmail = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,9 @@ class _RegisterPersonState extends State<RegisterPerson> {
         leading: Icon(Icons.assignment_ind),
         title: Text('Lista de pessoas'),
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.add_circle_outline), onPressed: () {})
+          IconButton(
+            icon: Icon(Icons.add_circle_outline), 
+            onPressed: () {})
         ],
       ),
       body: Column(
@@ -29,10 +31,37 @@ class _RegisterPersonState extends State<RegisterPerson> {
             keyboardType: TextInputType.text,
             style: TextStyle(fontSize: 25.0, color: Colors.green),
             decoration: InputDecoration(
+              labelText: 'Nome',
               labelStyle: TextStyle(color: Colors.green),
-            
             ),
             controller: _controladorName,
+          ),
+          TextField(
+            keyboardType: TextInputType.phone,
+            style: TextStyle(fontSize: 25.0, color: Colors.green),
+            decoration: InputDecoration(
+              labelText: 'Telefone',
+              labelStyle: TextStyle(color: Colors.green),
+            ),
+            controller: _controladorFone,
+          ),
+          TextField(
+            keyboardType: TextInputType.text,
+            style: TextStyle(fontSize: 25.0, color: Colors.green),
+            decoration: InputDecoration(
+              labelText: 'Endereço',
+              labelStyle: TextStyle(color: Colors.green),
+            ),
+            controller: _controladorAdress,
+          ),
+          TextField(
+            keyboardType: TextInputType.emailAddress,
+            style: TextStyle(fontSize: 25.0, color: Colors.green),
+            decoration: InputDecoration(
+              labelText: 'email',
+              labelStyle: TextStyle(color: Colors.green),
+            ),
+            controller: _controladorEmail,
           )
         ],
       ),
