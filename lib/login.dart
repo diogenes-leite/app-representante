@@ -68,7 +68,8 @@ class _LoginState extends State<Login> {
                           MaterialPageRoute(
                               builder: (context) => PagInicial()));
                     } else { 
-                      SnackBar(content: Text('usuário e senha incoretos'));
+                      
+                      Scaffold.of(context).showSnackBar(SnackBar(content: Text('usuário e senha incoretos')));
 
                     }
 

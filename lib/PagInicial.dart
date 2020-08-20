@@ -53,7 +53,24 @@ class _PagIncialState extends State<PagInicial> {
                           MaterialPageRoute(builder: (context) => MenuWeb()));
                     },
                   ),
-                )
+                ),
+                 Card(
+                  child: ListTile(
+                    title: Text('Cadastro de pessoas'),
+                    subtitle: Text('Visualize e cadastre'),
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage('assets/liderpdv.jpg'),
+                      maxRadius: 40,
+                      minRadius: 40,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MenuLiderPdv()));
+                    },
+                  ),
+                ),
               ],
             ),
           ],
